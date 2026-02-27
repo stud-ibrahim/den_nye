@@ -25,6 +25,20 @@ While it is raining, the environment becomes darker.
 When the rain stops, the environment becomes bright again, and the people leave the coffee shop they entered and go back outside to the square.
 
 #### 4. The Response (What happens next?)
-WhThe system responds in two ways:
-The people stop walking around the square and move into coffee shops.
-The city lighting changes so it becomes darker during rain and brighter again when the rain stops.
+The system responds in two ways:
+- Person markers turn red during rain (visual feedback)
+- Rain state is published on `weather/rain` topic every 20 seconds (10 seconds rain, then dry)
+
+#### Implementation
+
+See [docs/coffee_shop.md](docs/coffee_shop.md) for running instructions.
+
+**Quick start:**
+1. Open `notebooks/03_mqtt_random_walk/coffee_shop.ipynb`
+2. Run all cells (Cell → Run All)
+3. Open `notebooks/03_mqtt_random_walk/map_viewer.ipynb` in another tab to see the live map
+
+Or run the script version:
+```bash
+python scripts/demo/coffee_shop.py
+```

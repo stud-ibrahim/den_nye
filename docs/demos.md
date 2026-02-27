@@ -60,3 +60,11 @@ python scripts/demo/03_folium_map_city_hall.py
   - builds an anymap-ts map in WGS84 (no transforms)
   - saves `copenhagen_city_hall_map.html`
   - requires: `pip install -e ".[notebooks]"` (or `pip install anymap-ts[all]`)
+- `coffee_shop.py`
+  - simulates 3 persons walking around coffee shops
+  - publishes location data on `persons/{name}/location` topics
+  - publishes rain cycle on `weather/rain` topic (20s dry → 10s rain)
+  - person markers turn red during rain
+  - requires MQTT broker running (see [docs/mqtt.md](mqtt.md))
+  - view live on map: open `notebooks/03_mqtt_random_walk/map_viewer.ipynb`
+
